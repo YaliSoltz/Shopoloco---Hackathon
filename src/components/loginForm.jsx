@@ -27,8 +27,10 @@ const LoginForm = () => {
     }
     if (userName === CashierUser && password == CashierPassword) {
       setCurrentState("Cashier");
-    } else {
-      setResponse("Wrong Password");
+    } 
+
+    else {
+      setResponse("Username or Password is incorrect");
     }
     navigate('/')
   };
@@ -44,8 +46,7 @@ const LoginForm = () => {
         // value={userName}
         onChange={(e) => setUserName(e.target.value)}
         type="text"
-        className="form-control" id="user_name" fdprocessedid="7l3zqq"
-      />
+        className="form-control" id="user_name"/>
       <label htmlFor="user_name">User Name</label>
       </div>
 
@@ -55,8 +56,8 @@ const LoginForm = () => {
         // value={password}
         onChange={(e) => setPassword(e.target.value)}
         type="password"
-        className="form-control" id="user_password" fdprocessedid="7l3zqq"
-      />
+        className="form-control" id="user_password"/>
+
       <label htmlFor="user_password">Password</label>
         </div>
         <div className="checkbox m-3">
@@ -65,7 +66,7 @@ const LoginForm = () => {
       </label>
     </div>
 
-       <button className="w-100 btn btn-lg btn-primary" type="submit" fdprocessedid="bsy87">Login</button>
+       <button className="w-100 btn btn-lg btn-primary" type="submit">Login</button>
     <p className="mt-5 mb-3 text-muted">© 2017–2022</p>
       <div>{response}</div>
     </form>

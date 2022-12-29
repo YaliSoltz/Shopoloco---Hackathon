@@ -52,6 +52,7 @@ const AddProduct = () => {
       <select 
         name="category"
         value={formValues.category}
+        required
         onChange={handleChange}
       >
         <option value="" disabled>...</option>
@@ -94,7 +95,6 @@ const AddProduct = () => {
       <input
         type="date"
         name="expiredDate"
-        required
         value={formValues.expiredDate}
         onChange={handleChange}
       />
